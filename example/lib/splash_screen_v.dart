@@ -7,7 +7,7 @@ class SplashScreenV extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size  size = MediaQuery.of(context).size;
+    Size size = MediaQuery.of(context).size;
     return SplashSmoke(
       duration: const Duration(seconds: 6),
       nextPage: const Description(),
@@ -24,7 +24,7 @@ class SplashScreenV extends StatelessWidget {
       effectColor: Colors.white,
       child: SizedBox(
         height: 200,
-        width:size.width * 0.9,
+        width: size.width * 0.9,
         child: Padding(
           padding: const EdgeInsets.only(left: 15.0),
           child: Image.asset("assets/vote2.png"),
