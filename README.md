@@ -5,6 +5,7 @@ A Flutter package to create a splash screen with a smoke effect.
 
 ## Features
 
+![Uploading 20250117_060241.gif…]()
 
 
 
@@ -33,8 +34,7 @@ import 'package:splash_smoke/splash_smoke.dart';
 ```
 
 ## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
+ Include short and useful examples for package users. Add longer examples
 to `/example` folder.
 
 ```dart
