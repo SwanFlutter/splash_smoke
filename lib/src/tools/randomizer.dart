@@ -3,6 +3,18 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:splash_smoke/src/tools/circle_data.dart';
 
+/// Generates a list of random circle data sets.
+///
+/// This function creates a specified number of sets (`setCount`),
+/// where each set contains `N` randomly generated `CircleData` objects.
+///
+/// Parameters:
+/// - `N`: The number of `CircleData` objects in each set.
+/// - `setCount`: The total number of sets to generate.
+///
+/// Returns:
+/// A list of `setCount` lists, where each inner list contains `N`
+/// randomly generated `CircleData` objects.
 List<List<CircleData>> generateRandomCircleSets(int N, int setCount) {
   assert(N > 0 && setCount > 0, "N and setCount must be positive integers");
 

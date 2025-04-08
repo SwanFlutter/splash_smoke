@@ -1,6 +1,19 @@
 import 'package:flutter/widgets.dart';
 import 'package:splash_smoke/transition_type.dart';
 
+/// A custom page route that allows specifying a transition type, duration,
+/// reverse duration, and additional route information.
+///
+/// This class extends [PageRouteBuilder] to provide a customizable transition
+/// animation for navigating between pages.
+///
+/// - [child]: The widget to display as the content of the route.
+/// - [transitionType]: The type of transition animation to use.
+/// - [duration]: The duration of the forward transition animation.
+/// - [reverseDuration]: The duration of the reverse transition animation.
+/// - [routeName]: An optional name for the route, useful for debugging or
+///   analytics purposes.
+/// - [arguments]: Optional arguments to pass to the route.
 class CustomTransitionRoute extends PageRouteBuilder {
   final Widget child;
   final TransitionType transitionType;

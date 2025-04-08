@@ -4,6 +4,30 @@ import 'package:flutter/material.dart';
 import 'package:splash_smoke/src/tools/animation_sequence.dart';
 import 'package:splash_smoke/src/tools/circle_data.dart';
 
+/// A widget that displays animated circles based on a provided animation sequence.
+///
+/// This widget is a [StatefulWidget] that takes an [AnimationSequence] as input
+/// and animates circles according to the sequence.
+///
+/// The animation sequence is passed via the [sequence] parameter.
+///
+/// Example usage:
+/// ```dart
+/// AnimatedCircles(
+///   sequence: myAnimationSequence,
+/// )
+/// ```
+///
+/// {@tool snippet}
+/// To use this widget, ensure you have an [AnimationSequence] object ready:
+/// ```dart
+/// final myAnimationSequence = AnimationSequence(...);
+/// AnimatedCircles(sequence: myAnimationSequence);
+/// ```
+/// {@end-tool}
+///
+/// See also:
+///  * [AnimationSequence], which defines the animation behavior.
 class AnimatedCircles extends StatefulWidget {
   final AnimationSequence sequence;
 

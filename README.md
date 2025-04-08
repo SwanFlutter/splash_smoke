@@ -15,7 +15,7 @@ A Flutter package to create a splash screen with a smoke effect.
 
 ```yaml
 dependencies:
-    splash_smoke: ^0.0.1
+    splash_smoke: ^0.0.2
 ```
 
 Run the following command to fetch the package:
@@ -40,11 +40,24 @@ to `/example` folder.
 class SplashScreenV extends StatelessWidget {
   const SplashScreenV({super.key});
 
+  // Function to check user login status
+  bool isUserLoggedIn() {
+    // Implement your login status check logic here
+    // For example:
+    // return AuthService.instance.isLoggedIn;
+    return false; // For example, assuming user is not logged in
+  }
+
   @override
   Widget build(BuildContext context) {
     return SplashSmoke(
       duration: const Duration(seconds: 6),
-      nextPage: const Description(),
+      // Using conditionalNavigation instead of directly using nextPage
+      conditionalNavigation: ConditionalNavigation(
+        condition: () => isUserLoggedIn(),
+        truePage: const HomePage(), // Page to navigate if user is logged in
+        falsePage: const Description(), // Page to navigate if user is not logged in
+      ),
       rotatingLodingWidget: Image.asset(
         'assets/bottom_logo.png',
         width: 35,
