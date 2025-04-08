@@ -54,7 +54,7 @@ class SplashScreenV extends StatelessWidget {
       // Remove this line since we're using conditionalNavigation
       // nextPage: const HomePage(),
       duration: const Duration(seconds: 6),
-      conditionalNavigation: ConditionalNavigation(
+      conditionalNavigation: ConditionalNavigations(
         condition: () => isUserLoggedIn(),
         truePage: const HomePage(), // Page to navigate if user is logged in
         falsePage:

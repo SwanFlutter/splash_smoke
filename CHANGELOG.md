@@ -11,3 +11,8 @@
 * Fixed minor animation issues in the splash screen transition
 * Improved documentation with additional usage examples
 * Updated README with conditional navigation instructions
+
+
+## 0.0.3
+
+* Fix bug

@@ -15,7 +15,7 @@ A Flutter package to create a splash screen with a smoke effect.
 
 ```yaml
 dependencies:
-    splash_smoke: ^0.0.2
+    splash_smoke: ^0.0.3
 ```
 
 Run the following command to fetch the package:

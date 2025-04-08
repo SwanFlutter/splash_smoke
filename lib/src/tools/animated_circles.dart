@@ -97,6 +97,16 @@ class _AnimatedCirclesState extends State<AnimatedCircles>
   }
 }
 
+/// A custom painter that interpolates between two sets of circles
+/// (startCircles and endCircles) based on a progress value.
+///
+/// The [CirclesPainter] is used to draw animated circles by transitioning
+/// between the properties of the start and end circles.
+///
+/// - [startCircles]: The initial set of circle data.
+/// - [endCircles]: The final set of circle data.
+/// - [progress]: A value between 0.0 and 1.0 that determines the interpolation
+///   progress between the start and end circles.
 class CirclesPainter extends CustomPainter {
   final List<CircleData> startCircles;
   final List<CircleData> endCircles;

@@ -75,6 +75,18 @@ Offset _getRandomPositionInQuadrant(int quadrant, math.Random random) {
   return Offset(x, y);
 }
 
+/// Generates a nearby satellite position relative to a given main position.
+///
+/// This function calculates a random position near the specified `mainPosition`
+/// within a certain spread. The spread is controlled by the `distance` value,
+/// which is a random value between 0 and 0.5. The resulting position is clamped
+/// to ensure it stays within the bounds of (0.0, 1.0) for both x and y coordinates.
+///
+/// - Parameters:
+///   - mainPosition: The main position around which the satellite position is generated.
+///   - random: An instance of `math.Random` used to generate random values for angle and distance.
+///
+/// - Returns: A new `Offset` representing the nearby satellite position.
 Offset _getNearbySatellitePosition(Offset mainPosition, math.Random random) {
   double angle = random.nextDouble() * 2 * math.pi;
   double distance =
@@ -84,6 +96,21 @@ Offset _getNearbySatellitePosition(Offset mainPosition, math.Random random) {
   return Offset(x.clamp(0.0, 1.0), y.clamp(0.0, 1.0));
 }
 
+/// Generates a `CircleData` object with random properties.
+///
+/// This function creates a `CircleData` instance with the following properties:
+/// - A unique identifier (`id`) provided as a parameter.
+/// - A normalized position (`normalizedPosition`) based on the given `Offset`.
+/// - A random radius between 30 and 130.
+/// - A random color with full opacity.
+///
+/// Parameters:
+/// - `id`: A `String` representing the unique identifier for the circle.
+/// - `position`: An `Offset` representing the normalized position of the circle.
+/// - `random`: A `math.Random` instance used to generate random values.
+///
+/// Returns:
+/// A `CircleData` object with the generated properties.
 CircleData _generateCircleData(String id, Offset position, math.Random random) {
   return CircleData(
     id: id,
